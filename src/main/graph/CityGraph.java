@@ -3,18 +3,7 @@ package graph;
 import model.Edge;
 import java.util.List;
 import java.util.ArrayList;
-/**We will be using and Adajacency List 
-to represent the graph of city locations(nodes) with weights(distance/time) 
 
-Store nodes and edges between them 
-AL is advantagious for small project like ours since its efficienct neighbour lookup
-The no of nodes are immutable(fixed at innitialization i.e final)
-
-HOW ITLL BE USED BY OTHER MODULES
-itll be initialized with a fixed no of nodes
-Adding edges -> addEdge() method
-Dijkstra will query neighbours via getNeighbours() method
-*/
 public class CityGraph {
 
     /** AL representation of the graph.
@@ -62,4 +51,21 @@ public class CityGraph {
         //adding it to corresponding correct node's list
         adjList.get(source).add(edge);
     }
+
+    public List<Edge> getNeighbors(int node) {
+    // Validate node
+    if (node < 0 || node >= numNodes) {
+        throw new IllegalArgumentException("Invalid node: " + node + " (must be 0-" + (numNodes-1) + ")");
+    }
+    
+    // Return defensive copy
+    return new ArrayList<>(adjList.get(node));
+}
+
+/* Returns the number of nodes in the graph.
+
+ */
+public int getNumNodes() {
+    return numNodes;
+}
 }

@@ -24,3 +24,24 @@ public class RideRequestService {
         return null;
     }
 }
+// THIS IS MEMBER 1(MUTUA) THAT COMMENTED THIS CODE. IT HAS SOME AMBIGUITY AND I DECIDED TO LEAVE IT THAT WAY FOR ERICK TO SORT IT AFTER MERGING
+//package service;
+
+// import model.RideRequest;
+// import java.util.LinkedList;
+// import java.util.Queue;
+
+
+// public class RideRequestService {
+
+//     // Queue to store all ride requests
+//     private Queue<RideRequest> rideQueue;
+
+//     // Constructor initializes the queue
+//     public RideRequestService() {
+//         rideQueue = new LinkedList<>();
+//     }
+
+//        public void addRequest(RideRequest request) {
+//         rideQueue.add(request);
+//     }

@@ -42,7 +42,7 @@ public class Server {
         requestService = new RideRequestService();
         tripService = new TripService();
         dispatchService = new DispatchService(
-            graph, new Dijkstra(), requestService, driverService, tripService
+            graph, requestService, driverService, tripService
         );
         
         driverService.addDriver(new Driver("D001", "John Smith", "A"));

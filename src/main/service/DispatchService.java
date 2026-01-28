@@ -9,7 +9,6 @@ import java.util.Map;
 
 public class DispatchService {
     private CityGraph cityGraph;
-    private Dijkstra dijkstra;
     private RideRequestService rideRequestService;
     private DriverService driverService;
     private TripService tripService;
@@ -18,12 +17,10 @@ public class DispatchService {
 
     public DispatchService(
             CityGraph cityGraph,
-            Dijkstra dijkstra,
             RideRequestService rideRequestService,
             DriverService driverService,
             TripService tripService) {
         this.cityGraph = cityGraph;
-        this.dijkstra = dijkstra;
         this.rideRequestService = rideRequestService;
         this.driverService = driverService;
         this.tripService = tripService;

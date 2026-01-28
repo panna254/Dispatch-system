@@ -71,7 +71,6 @@ public class Main {
         tripService = new TripService();
         dispatchService = new DispatchService(
             graph, 
-            new Dijkstra(),
             requestService, 
             driverService, 
             tripService
